@@ -1,68 +1,38 @@
 ---
+import GalleryIcon from '../components/GalleryIcon.astro'
+import EmailIcon from '../components/EmailIcon.astro'
+import NavBar from '../components/NavBar.astro'
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+import Wave from '../components/Wave.astro'
 const title = 'The Cove Parise de Reves'
 ---
 
 <Layout title={title}>
-	<main></main>
+	<main>
+		<section
+		class="h-screen max-w-[calc(100%_-_2rem)] bg-[url('/images/Home.webp')] bg-cover bg-center bg-no-repeat"
+	>
+		<NavBar />
+	</section>
+	<section
+		class="h-screen bg-black max-w-[calc(100%_-_2rem)] bg-[url('/images/Home2.webp')] bg-cover bg-no-repeat "
+		style="clip-path: polygon(49% 0, 75% 0, 85% 6%, 100% 0, 100% 100%, 0 99%, 0 25%, 0 0, 11% 5%, 17% 0)"
+	>
+		<div
+			class=" pt-20 text-xl text-white lg:items-center flex"
+		>
+			<p class="text-pretty px-10 max-w-4xl flex-grow">
+				This newly-remodeled luxurious 5-bedroom, 3-1/2 bath home is nestled in a beautiful 7-1/2
+				acre wooded area in the hills of Northwest Austin. It affords guests an amazing canyon view
+				and ample privacy in a serene setting. This home is minutes from the heart of downtown
+				Austin and is close to popular destinations including The Austin Country Club, Lake Travis,
+				the Bull Creek Greenbelt, the hike and bike trails of Ladybird Lake, Zilker Park and
+				Austin’s iconic Pennybacker Bridge
+			</p>
+			<div class=" flex ml-auto gap-5 mr-10 mb-10">
+				<a class=" flex" href="">See Gallery <GalleryIcon/></a>
+			</div>
+		</div>
+	</section>
+	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
