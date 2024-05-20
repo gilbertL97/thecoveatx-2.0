@@ -4,6 +4,7 @@ import EmailIcon from '../components/EmailIcon.astro'
 import NavBar from '../components/NavBar.astro'
 import Layout from '../layouts/Layout.astro'
 import Wave from '../components/Wave.astro'
+import ButtonLinkWithAnimationIcon from '../components/ButtonLinkWithAnimationIcon.astro'
 const title = 'The Cove Parise de Reves'
 ---
 
@@ -30,7 +31,12 @@ const title = 'The Cove Parise de Reves'
 				Austin’s iconic Pennybacker Bridge
 			</p>
 			<div class=" flex ml-auto gap-5 mr-10 mb-10">
-				<a class=" flex" href="">See Gallery <GalleryIcon/></a>
+				<ButtonLinkWithAnimationIcon text='Inquire Now'>
+					<EmailIcon slot='icon'/>
+				</ButtonLinkWithAnimationIcon>
+				<ButtonLinkWithAnimationIcon text='See Gallery'>
+					<GalleryIcon slot='icon'/>
+				</ButtonLinkWithAnimationIcon>
 			</div>
 		</div>
 	</section>
