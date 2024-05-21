@@ -1,0 +1,16 @@
+---
+import NavBar from '../components/NavBar.astro'
+import Layout from './Layout.astro'
+const title = 'The Cove Parise de Reves'
+---
+
+<Layout title={title}>
+	<main>
+		<section
+			class="h-screen max-w-[calc(100%_-_2rem)] bg-[url('/images/Home.webp')] bg-cover bg-center bg-no-repeat"
+		>
+			<NavBar />
+		</section>
+		<slot name="section2" />
+	</main>
+</Layout>

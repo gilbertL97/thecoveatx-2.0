@@ -1,4 +1,5 @@
 ---
+import NavbarLink from './Links/NavbarLink.astro'
 import Logo from './Logo.astro'
 ---
 
@@ -7,11 +8,10 @@ import Logo from './Logo.astro'
 	<ul
 		class="font-heading mx-auto hidden space-x-12 px-4 font-semibold md:flex md:text-sm xl:text-xl"
 	>
-		<li><a href="" class="text-white">Home</a></li>
-		<li><a href="" class="text-white">Gallery</a></li>
-		<li><a href="" class="text-white">Videos</a></li>
-		<li><a href="" class="text-white">Vendors</a></li>
-		<li><a href="" class="text-white">La Casita</a></li>
-		<li><a href="" class="text-white">Contact Us</a></li>
+		<li><NavbarLink text="Home" link="#" /></li>
+		<li><NavbarLink text="Gallery" link="#" /></li>
+		<li><NavbarLink text="Videos" link="#" /></li>
+		<li><NavbarLink text="Vendors" link="#" /></li>
+		<li><NavbarLink text="La Casita" link="#" /></li>
 	</ul>
 </nav>
