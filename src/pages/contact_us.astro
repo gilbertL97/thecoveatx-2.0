@@ -1,0 +1,30 @@
+---
+import NumberInputs from '../components/Form/NumberInputs.astro'
+import PhoneInputs from '../components/Form/PhoneInputs.astro'
+import TextFields from '../components/Form/TextFields.astro'
+import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro'
+---
+
+<LayoutWithNavbar>
+	<form class="mx-auto max-w-md">
+		<TextFields name="name" id="name" fore="name" text="Name" />
+
+		<TextFields type="email" name="email" id="email" fore="email" text="Email address" />
+		<!-- <div class="grid md:grid-cols-2 md:gap-6"> -->
+		<TextFields name="typeEvents" id="typeEvents" fore="typeEvents" text="Type of Event" />
+		<TextFields name="hear" id="hear" fore="hear" text="How Did You Hear About us?" />
+		<TextFields
+			name="details"
+			id="details"
+			fore="details"
+			text="Any other details we should know?"
+		/>
+		<NumberInputs />
+		<PhoneInputs />
+		<button
+			type="submit"
+			class="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+			>Submit</button
+		>
+	</form>
+</LayoutWithNavbar>

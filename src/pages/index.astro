@@ -1,6 +1,6 @@
 ---
-import GalleryIcon from '../components/GalleryIcon.astro'
-import EmailIcon from '../components/EmailIcon.astro'
+import GalleryIcon from '../components/icons/GalleryIcon.astro'
+import EmailIcon from '../components/icons/EmailIcon.astro'
 import ButtonLinkWithAnimationIcon from '../components/ButtonLinks/ButtonLinkWithAnimationIcon.astro'
 import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 ---
@@ -8,10 +8,10 @@ import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 <LayoutWithSection>
 	<section
 		slot="section2"
-		class="h-screen max-w-[calc(100%_-_2rem)] bg-black bg-[url('/images/Home2.webp')] bg-cover bg-no-repeat"
+		class="h-screen max-w-full bg-[url('/images/Home2.webp')] bg-cover bg-no-repeat"
 		style="clip-path: polygon(49% 0, 75% 0, 85% 6%, 100% 0, 100% 100%, 0 99%, 0 25%, 0 0, 11% 5%, 17% 0)"
 	>
-		<div class="flex pt-20 text-xl text-white lg:items-center">
+		<div class="hidden pt-20 text-xl text-white lg:flex lg:items-center">
 			<p class="max-w-4xl flex-grow text-pretty px-10">
 				This newly-remodeled luxurious 5-bedroom, 3-1/2 bath home is nestled in a beautiful 7-1/2
 				acre wooded area in the hills of Northwest Austin. It affords guests an amazing canyon view
@@ -20,7 +20,7 @@ import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 				the Bull Creek Greenbelt, the hike and bike trails of Ladybird Lake, Zilker Park and
 				Austin’s iconic Pennybacker Bridge
 			</p>
-			<div class="mb-10 ml-auto mr-10 flex gap-5">
+			<div class="mb-10 ml-auto mr-10 hidden gap-5 lg:flex">
 				<ButtonLinkWithAnimationIcon text="Inquire Now">
 					<EmailIcon slot="icon" />
 				</ButtonLinkWithAnimationIcon>

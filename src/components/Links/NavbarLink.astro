@@ -1,17 +1,15 @@
 ---
-import type { boolean } from 'astro/zod';
-import type Logo from '../Logo.astro';
-
 interface Props {
 	text: string
 	link: string
-	active?:boolean
+	active?: boolean
 }
 const { text, link, active } = Astro.props
 ---
 
 <a href={link} class="group text-white transition duration-300"
 	>{text}
-	<span class=`block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full ${active ? 'max-w-full' : ''}`
+	<span
+		class=`block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full ${active ? 'max-w-full' : ''}`
 	></span>
 </a>

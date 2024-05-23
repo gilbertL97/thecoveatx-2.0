@@ -1,0 +1,10 @@
+---
+import NavBar from '../components/NavBar.astro'
+import Layout from './Layout.astro'
+const title = 'The Cove Parise de Reves'
+---
+
+<Layout title={title}>
+	<NavBar />
+	<slot />
+</Layout>
