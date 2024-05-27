@@ -1,12 +1,20 @@
 ---
 import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro'
 import Gallery from '../components/Gallery.astro'
+import ButtonOnTop from '../components/ButtonLinks/ButtonOnTop.astro'
 ---
 
 <LayoutWithNavbar>
-	<main class="h-full w-full px-7" >
-		<h2 class=" text-center text-5xl my-6 mb-9">Take a Look Inside! </h2>
-		<Gallery/>
+	<main class="h-full w-full px-7">
+		<h2 class="lg my-6 mb-9 text-center text-3xl sm:text-5xl" id="gallery-title">
+			Take a Look Inside!
+		</h2>
+		<Gallery />
+		<ButtonOnTop />
 	</main>
 </LayoutWithNavbar>
-
+<style>
+	main {
+		scroll-behavior: smooth;
+	}
+</style>

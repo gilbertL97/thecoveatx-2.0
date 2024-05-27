@@ -1,0 +1,33 @@
+---
+import ArrowUp from '../icons/ArrowUp.astro'
+---
+
+<button
+	type="button"
+	class="transit fixed bottom-5 end-5 hidden size-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 p-3 text-white md:size-16"
+	id="btn-back-to-top"
+>
+	<span> <ArrowUp /></span>
+</button>
+
+<script>
+	const mybutton = document.getElementById('btn-back-to-top')
+
+	// When the user scrolls down 20px from the top of the document, show the button
+
+	const scrollFunction = () => {
+		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+			mybutton && mybutton.classList.remove('hidden')
+		} else {
+			mybutton && mybutton.classList.add('hidden')
+		}
+	}
+	const backToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	mybutton && mybutton.addEventListener('click', backToTop)
+
+	window.addEventListener('scroll', scrollFunction)
+</script>

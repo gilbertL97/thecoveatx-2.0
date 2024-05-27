@@ -1,32 +1,34 @@
-<script >
-    import 'photoswipe/style.css'
+<script>
+	import 'photoswipe/style.css'
 	import PhotoSwipeLightbox from 'photoswipe/lightbox'
 	//import PhotoSwipe from 'photoswipe';
 	const lightbox = new PhotoSwipeLightbox({
 		gallery: '#my-gallery',
 		children: 'a',
-		pswpModule: ()=>import('photoswipe')
+		pswpModule: () => import('photoswipe')
 	})
 	lightbox.init()
-        
-    document.addEventListener(
-        'astro:page-load',
-        () => { if (lightbox) lightbox.init() },
-        { once: false },
-      )
+
+	document.addEventListener(
+		'astro:page-load',
+		() => {
+			if (lightbox) lightbox.init()
+		},
+		{ once: false }
+	)
 </script>
 
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 px-1 md:px-5 " id="my-gallery">
-    {
-        Array.from({length:52 }).map((_,i)=>(
-        <a
-        href={`/gallery/HD/image (${i+1}).webp`}
-        data-pswp-width="1920"
-        data-pswp-height="1280"
-    >
-        <img class="rounded-xl hover:scale-105 transition-all" 
-        src={`/gallery/LD/image (${i+1}).webp`} alt="" loading="lazy"/>
-    </a>
-        ))
-    }
+<div class="grid grid-cols-2 gap-5 px-1 md:grid-cols-3 md:px-5 lg:grid-cols-4" id="my-gallery">
+	{
+		Array.from({ length: 52 }).map((_, i) => (
+			<a href={`/gallery/HD/image (${i + 1}).webp`} data-pswp-width="1920" data-pswp-height="1280">
+				<img
+					class="rounded-xl transition-all hover:scale-105"
+					src={`/gallery/LD/image (${i + 1}).webp`}
+					alt=""
+					loading="lazy"
+				/>
+			</a>
+		))
+	}
 </div>
