@@ -12,7 +12,6 @@
 		"format": "prettier . --write"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.7.0",
 		"@astrojs/tailwind": "^5.1.0",
 		"astro": "^4.5.16",
 		"flowbite-datepicker": "^1.2.6",
