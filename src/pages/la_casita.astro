@@ -4,20 +4,7 @@ import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro'
 import { Image } from 'astro:assets'
 
 // Lista de imágenes
-const images = [
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg', alt: '' },
-	{ src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg', alt: '' }
-]
+
 
 // Función para generar la clase de grid basada en el tamaño de la pantalla
 // function getGridClass() {
@@ -30,14 +17,5 @@ const images = [
 
 <LayoutWithNavbar>
 	<main class="h-full w-full">
-		<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-			{
-				images.map((image) => (
-					<div>
-						<Image inferSize class="h-auto max-w-full rounded-lg" src={image.src} alt={image.alt} />
-					</div>
-				))
-			}
-		</div>
 	</main>
 </LayoutWithNavbar>
