@@ -6,7 +6,6 @@ import tailwind from '@astrojs/tailwind'
 export default defineConfig({
 
 	site: 'https://gilbertL97.github.io/thecoveatx-2.0',
-	base: 'https://gilbertL97.github.io/thecoveatx-2.0',
 	integrations: [tailwind()],
 	renderers: ['@astrojs/renderer-github-pages'],
 	i18n: {
