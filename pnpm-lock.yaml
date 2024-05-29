@@ -17,9 +17,6 @@ importers:
       flatpickr:
         specifier: ^4.6.13
         version: 4.6.13
-      flowbite-datepicker:
-        specifier: ^1.2.6
-        version: 1.2.6
       photoswipe:
         specifier: ^5.4.3
         version: 5.4.3
@@ -613,9 +610,6 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==, tarball: https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz}
     engines: {node: '>=14'}
 
-  '@popperjs/core@2.11.8':
-    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==, tarball: https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz}
-
   '@rollup/rollup-android-arm-eabi@4.17.2':
     resolution: {integrity: sha512-NM0jFxY8bB8QLkoKxIQeObCaDlJKewVlIEkuyYKm5An1tdVZ966w2+MPQ2l8LBZLjR+SgyV+nRkTIunzOYBMLQ==, tarball: https://registry.npmjs.org/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.17.2.tgz}
     cpu: [arm]
@@ -1075,12 +1069,6 @@ packages:
     resolution: {integrity: sha512-9UbaD6XdAL97+k/n+N7JwX46K/M6Zc6KcFYskrYL8wbBV/Uyk0CTAMY0VT+qiK5PM7AIc9aTWYtq65U7T+aCNQ==, tarball: https://registry.npmjs.org/flattie/-/flattie-1.1.1.tgz}
     engines: {node: '>=8'}
 
-  flowbite-datepicker@1.2.6:
-    resolution: {integrity: sha512-UbU/xXs9HFiwWfL4M1vpwIo8EpS0NUQSOvYnp0Z9u3N118nU7lPFGoUOq7su9d0aOJy9FssXzx1SZwN8MXhE1g==, tarball: https://registry.npmjs.org/flowbite-datepicker/-/flowbite-datepicker-1.2.6.tgz}
-
-  flowbite@2.3.0:
-    resolution: {integrity: sha512-pm3JRo8OIJHGfFYWgaGpPv8E+UdWy0Z3gEAGufw+G/1dusaU/P1zoBLiQpf2/+bYAi+GBQtPVG86KYlV0W+AFQ==, tarball: https://registry.npmjs.org/flowbite/-/flowbite-2.3.0.tgz}
-
   foreground-child@3.1.1:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==, tarball: https://registry.npmjs.org/foreground-child/-/foreground-child-3.1.1.tgz}
     engines: {node: '>=14'}
@@ -1485,10 +1473,6 @@ packages:
   mimic-fn@4.0.0:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==, tarball: https://registry.npmjs.org/mimic-fn/-/mimic-fn-4.0.0.tgz}
     engines: {node: '>=12'}
-
-  mini-svg-data-uri@1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==, tarball: https://registry.npmjs.org/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz}
-    hasBin: true
 
   minimatch@9.0.4:
     resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==, tarball: https://registry.npmjs.org/minimatch/-/minimatch-9.0.4.tgz}
@@ -2628,8 +2612,6 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@popperjs/core@2.11.8': {}
-
   '@rollup/rollup-android-arm-eabi@4.17.2':
     optional: true
 
@@ -3147,15 +3129,6 @@ snapshots:
   flatpickr@4.6.13: {}
 
   flattie@1.1.1: {}
-
-  flowbite-datepicker@1.2.6:
-    dependencies:
-      flowbite: 2.3.0
-
-  flowbite@2.3.0:
-    dependencies:
-      '@popperjs/core': 2.11.8
-      mini-svg-data-uri: 1.4.4
 
   foreground-child@3.1.1:
     dependencies:
@@ -3746,8 +3719,6 @@ snapshots:
   mimic-fn@2.1.0: {}
 
   mimic-fn@4.0.0: {}
-
-  mini-svg-data-uri@1.4.4: {}
 
   minimatch@9.0.4:
     dependencies:
