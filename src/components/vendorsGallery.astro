@@ -1,41 +1,94 @@
 ---
 interface VendorLinks {
-	title:string
-	desc:string
-	background:string
-    link:string
+	title: string
+	desc: string
+	background: string
+	link: string
 }
-const vendors:VendorLinks[] = [
-	{title:'TACOMAN512',desc:'Food Catering', background:'imageVendors(5).webp',link:'https://www.tacoman512.com/'},
-	{title:'NOCCO´S PIZZA',desc:'Food Catering', background:'imageVendors(2).webp',link:'https://www.noccospizza.com/'},
-	{title:'LA PAELLA DE ADRI',desc:'Food Catering', background:'imageVendors(7).webp',link:'https://www.instagram.com/lapaelladeadri/'},
-	{title:'PEACHED TORTILLA',desc:'Food Catering', background:'imageVendors(3).webp',link:'https://thepeachedtortilla.com/catering'},
-	{title:'YURI 360',desc:'360 Photobooth', background:'imageVendors(1).webp',link:'https://www.yuri360.co/'},
-	{title:'CINEMA ANYWHERE AUSTIN',desc:'Director LED Robot and more!', background:'imageVendors(8).webp',link:'https://www.instagram.com/cinemaanywhereaustin/?hl=en'},
-	{title:'PASTEL SOFT PLAY',desc:'San Antonio Ball pits and bounce houses', background:'imageVendors(1).1.webp',link:'https://www.instagram.com/pastelsoftplay/?hl=en'},
-    {title:'AV FILMS',desc:'Video & Photography', background:'imageVendors(6).webp',link:'https://www.instagram.com/av_films/?hl=en'},
-    {title:'FULL SPECTRUM ICE',desc:'Custom Ice Sculptures', background:'imageVendors(9).webp',link:'https://fullspectrumice.com/'},
-    {title:'GLAMOUR EVENTS ',desc:'', background:'imageVendors(1)2.webp',link:'https://glamoureventrentals.com/'},
-    {title:'MORE VENDORS ',desc:'Coming soon', background:'imageVendors(4).webp',link:''}
+const vendors: VendorLinks[] = [
+	{
+		title: 'TACOMAN512',
+		desc: 'Food Catering',
+		background: 'imageVendors(5).webp',
+		link: 'https://www.tacoman512.com/'
+	},
+	{
+		title: 'NOCCO´S PIZZA',
+		desc: 'Food Catering',
+		background: 'imageVendors(2).webp',
+		link: 'https://www.noccospizza.com/'
+	},
+	{
+		title: 'LA PAELLA DE ADRI',
+		desc: 'Food Catering',
+		background: 'imageVendors(7).webp',
+		link: 'https://www.instagram.com/lapaelladeadri/'
+	},
+	{
+		title: 'PEACHED TORTILLA',
+		desc: 'Food Catering',
+		background: 'imageVendors(3).webp',
+		link: 'https://thepeachedtortilla.com/catering'
+	},
+	{
+		title: 'YURI 360',
+		desc: '360 Photobooth',
+		background: 'imageVendors(1).webp',
+		link: 'https://www.yuri360.co/'
+	},
+	{
+		title: 'CINEMA ANYWHERE AUSTIN',
+		desc: 'Director LED Robot and more!',
+		background: 'imageVendors(8).webp',
+		link: 'https://www.instagram.com/cinemaanywhereaustin/?hl=en'
+	},
+	{
+		title: 'PASTEL SOFT PLAY',
+		desc: 'San Antonio Ball pits and bounce houses',
+		background: 'imageVendors(1).1.webp',
+		link: 'https://www.instagram.com/pastelsoftplay/?hl=en'
+	},
+	{
+		title: 'AV FILMS',
+		desc: 'Video & Photography',
+		background: 'imageVendors(6).webp',
+		link: 'https://www.instagram.com/av_films/?hl=en'
+	},
+	{
+		title: 'FULL SPECTRUM ICE',
+		desc: 'Custom Ice Sculptures',
+		background: 'imageVendors(9).webp',
+		link: 'https://fullspectrumice.com/'
+	},
+	{
+		title: 'GLAMOUR EVENTS ',
+		desc: '',
+		background: 'imageVendors(1)2.webp',
+		link: 'https://glamoureventrentals.com/'
+	},
+	{ title: 'MORE VENDORS ', desc: 'Coming soon', background: 'imageVendors(4).webp', link: '' }
 ]
 ---
-<div class="grid grid-cols-1 gap-5 px-3 md:grid-cols-2 md:px-5 lg:grid-cols-3 ">
+
+<div class="grid grid-cols-1 gap-5 px-3 md:grid-cols-2 md:px-5 lg:grid-cols-3">
 	{
 		vendors.map((vendor) => (
-            
-<a class="bg-white transition-all hover:scale-105 m-5 rounded-2xl flex flex-col" href={vendor.link} target="_blank">
-    <img
-        class="rounded-t-xl w-full"
-        src={`/vendors/${vendor.background}`}
-        alt=""
-        loading="lazy"
-    />
-    <div class="bg-gray-700 py-3 text-center  rounded-b-xl relative flex-grow">
-        <p class="text-2xl ">{vendor.title}</p>
-        <p class="text-sm text-gray-400 ">{vendor.desc}</p>
-    </div>
-</a>
-
+			<a
+				class="m-5 flex flex-col rounded-2xl bg-white transition-all hover:scale-105"
+				href={vendor.link}
+				target="_blank"
+			>
+				<img
+					class="w-full rounded-t-xl"
+					src={`/vendors/${vendor.background}`}
+					alt=""
+					loading="lazy"
+				/>
+				<div class="relative flex-grow rounded-b-xl  bg-gray-700 py-3 text-center">
+					<p class="text-2xl ">{vendor.title}</p>
+					<p class="text-sm text-gray-400 ">{vendor.desc}</p>
+				</div>
+			</a>
 		))
 	}
 </div>

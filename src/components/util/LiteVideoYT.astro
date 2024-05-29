@@ -7,16 +7,13 @@ interface Props {
 const { videoId, title, backgroundImage } = Astro.props
 ---
 
-<lite-youtube
-	videoid={videoId}
-	style=`background-image: url(${backgroundImage});`
->
+<lite-youtube videoid={videoId} style=`background-image: url(${backgroundImage});`>
 	<a href=`https://youtube.com/watch?v=${videoId}` class="lty-playbtn" title={title}>
 		<span class="lyt-visually-hidden">{title}</span>
 	</a>
 </lite-youtube>
 <script>
-    // @ts-nocheck
+	// @ts-nocheck
 	/**
 	 * A lightweight youtube embed. Still should feel the same to the user, just MUCH faster to initialize and paint.
 	 *
@@ -236,7 +233,7 @@ const { videoId, title, backgroundImage } = Astro.props
 					// A pretty ugly hack since onerror won't fire on YouTube image 404. This is (probably) due to
 					// Youtube's style of returning data even with a 404 status. That data is a 120x90 placeholder image.
 					// … per "annoying yt 404 behavior" in the .md
-                    
+
 					const noAvailablePoster = e.target.naturalHeight == 90 && e.target.naturalWidth == 120
 					if (noAvailablePoster) return
 

@@ -1,32 +1,36 @@
 ---
 
 ---
+
 <div class="mb-5 flex w-full items-center">
-<input type="text" placeholder="Select Date ..." class="w-full h-10 border-0 border-b-2 focus:outline-none text-lg border-gray-700 bg-transparent px-0 py-2.5 " id="date-picker"/>
+	<input
+		type="text"
+		placeholder="Select Date ..."
+		class="h-10 w-full border-0 border-b-2 border-gray-700 bg-transparent px-0 py-2.5 text-lg focus:outline-none"
+		id="date-picker"
+	/>
 </div>
 
 <script>
 	import 'flatpickr/dist/themes/dark.css'
-	import flatpickr from 'flatpickr';
+	import flatpickr from 'flatpickr'
 
-	const today = new Date();
-    const dd = String(today.getDate()).padStart(2, '0');
-    const mm = String(today.getMonth() + 1).padStart(2, '0'); // Los meses en JavaScript empiezan desde 0
-    const yyyy = today.getFullYear();
+	const today = new Date()
+	const dd = String(today.getDate()).padStart(2, '0')
+	const mm = String(today.getMonth() + 1).padStart(2, '0') // Los meses en JavaScript empiezan desde 0
+	const yyyy = today.getFullYear()
 
-    const minDate = yyyy + '-' + mm + '-' + dd
-	
+	const minDate = yyyy + '-' + mm + '-' + dd
+
 	document.addEventListener(
 		'astro:page-load',
 		() => {
-			flatpickr("#date-picker", {
-    		dateFormat: "Y-m-d",
-			minDate:minDate,
-  });
+			flatpickr('#date-picker', {
+				dateFormat: 'Y-m-d',
+				minDate: minDate
+			})
 		},
 		{ once: false }
 	)
-  // Inicializa Flatpickr en el elemento deseado
-
+	// Inicializa Flatpickr en el elemento deseado
 </script>
-

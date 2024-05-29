@@ -1,39 +1,74 @@
 ---
-import ButtonOnTop from '../components/ButtonLinks/ButtonOnTop.astro';
-import LiteVideoYT from '../components/util/LiteVideoYT.astro';
-import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro';
+import ButtonOnTop from '../components/ButtonLinks/ButtonOnTop.astro'
+import LiteVideoYT from '../components/util/LiteVideoYT.astro'
+import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro'
 interface VideosYt {
-	title:string
-	videoId:string
-	background?:string
+	title: string
+	videoId: string
+	background?: string
 }
-const ytVideos:VideosYt[] = [
-	{title:'Annabelle & Jordan Wedding at The Cove',videoId:'xcLHtXRvquU', background:'https://i.ytimg.com/vi/xcLHtXRvquU/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDwgVyhyMA8=&rs=AOn4CLCfXo7tT8UsnddiwqIsGCs7kzybiw'},
-	{title:'Dinner In The Dark - Part two',videoId:'tC-k_y86sPE', background:'https://i.ytimg.com/vi/tC-k_y86sPE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHOBYACgAqKAgwIABABGHIgTChBMA8=&rs=AOn4CLBzEYxhnP-gNSeZ9s5vuSHolNMltA'},
-	{title:'Dinner In The Dark ',videoId:'tm5PRWLHhGs', background:'https://i.ytimg.com/vi/tm5PRWLHhGs/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHOBYACgAqKAgwIABABGGUgUihQMA8=&rs=AOn4CLAsoJ6bjJp9sK_ft6WskZ8NFa6e5w'},
-	{title:'Royal & Chesha - Wedding',videoId:'JGfu6J4ZmPQ', background:'https://i.ytimg.com/vi/JGfu6J4ZmPQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEQgSyhlMA8=&rs=AOn4CLDbHfJxtHaeRBwbmVpkfoLQj6zg5g'},
-	{title:'Aliza´s 21st Birthday at The Cove',videoId:'4OlVldNCIeU', background:'https://i.ytimg.com/vi/4OlVldNCIeU/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-DoACuAiKAgwIABABGH8gEyg0MA8=&rs=AOn4CLD6i4ifVNTefx_zu863576xHgGoWA'},
-	{title:'Book your special event at The Cove!',videoId:'PbBlQWHPkIM', background:'https://i.ytimg.com/vi_webp/PbBlQWHPkIM/maxresdefault.webp'},
-	{title:'Adela + Marcus - The Proposal',videoId:'xcLHtXRvquU', background:'https://i.ytimg.com/vi/Y_sVcup8Yuo/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTSgrMA8=&rs=AOn4CLBRf7RZ8hTreLOkdaDW7onwSTHuNQ'},
+const ytVideos: VideosYt[] = [
+	{
+		title: 'Annabelle & Jordan Wedding at The Cove',
+		videoId: 'xcLHtXRvquU',
+		background:
+			'https://i.ytimg.com/vi/xcLHtXRvquU/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDwgVyhyMA8=&rs=AOn4CLCfXo7tT8UsnddiwqIsGCs7kzybiw'
+	},
+	{
+		title: 'Dinner In The Dark - Part two',
+		videoId: 'tC-k_y86sPE',
+		background:
+			'https://i.ytimg.com/vi/tC-k_y86sPE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHOBYACgAqKAgwIABABGHIgTChBMA8=&rs=AOn4CLBzEYxhnP-gNSeZ9s5vuSHolNMltA'
+	},
+	{
+		title: 'Dinner In The Dark ',
+		videoId: 'tm5PRWLHhGs',
+		background:
+			'https://i.ytimg.com/vi/tm5PRWLHhGs/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHOBYACgAqKAgwIABABGGUgUihQMA8=&rs=AOn4CLAsoJ6bjJp9sK_ft6WskZ8NFa6e5w'
+	},
+	{
+		title: 'Royal & Chesha - Wedding',
+		videoId: 'JGfu6J4ZmPQ',
+		background:
+			'https://i.ytimg.com/vi/JGfu6J4ZmPQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEQgSyhlMA8=&rs=AOn4CLDbHfJxtHaeRBwbmVpkfoLQj6zg5g'
+	},
+	{
+		title: 'Aliza´s 21st Birthday at The Cove',
+		videoId: '4OlVldNCIeU',
+		background:
+			'https://i.ytimg.com/vi/4OlVldNCIeU/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-DoACuAiKAgwIABABGH8gEyg0MA8=&rs=AOn4CLD6i4ifVNTefx_zu863576xHgGoWA'
+	},
+	{
+		title: 'Book your special event at The Cove!',
+		videoId: 'PbBlQWHPkIM',
+		background: 'https://i.ytimg.com/vi_webp/PbBlQWHPkIM/maxresdefault.webp'
+	},
+	{
+		title: 'Adela + Marcus - The Proposal',
+		videoId: 'xcLHtXRvquU',
+		background:
+			'https://i.ytimg.com/vi/Y_sVcup8Yuo/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTSgrMA8=&rs=AOn4CLBRf7RZ8hTreLOkdaDW7onwSTHuNQ'
+	}
 ]
 ---
+
 <LayoutWithNavbar>
-	<main class="h-full w-full ">
-		<section class="mx-auto  max-w-xl pb-6">
+	<main class="h-full w-full">
+		<section class="mx-auto max-w-xl pb-6">
 			{
-				ytVideos.map((vid)=>(
-					<h2 class="text-2xl my-2 pt-5" >{vid.title}</h2>
-					<LiteVideoYT title={vid.title} videoId={vid.videoId} backgroundImage={vid.background} />
-					))
-			}   
-		<!-- <LiteVideoYT title="Annabelle & Jordan Wedding at The Cove" videoId="xcLHtXRvquU" backgroundImage="https://i.ytimg.com/vi/xcLHtXRvquU/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDwgVyhyMA8=&rs=AOn4CLCfXo7tT8UsnddiwqIsGCs7kzybiw" />
+				ytVideos.map((vid) => (
+					<>
+						<h2 class="my-2 pt-5 text-2xl">{vid.title}</h2>
+						<LiteVideoYT title={vid.title} videoId={vid.videoId} backgroundImage={vid.background} />
+					</>
+				))
+			}
+			<!-- <LiteVideoYT title="Annabelle & Jordan Wedding at The Cove" videoId="xcLHtXRvquU" backgroundImage="https://i.ytimg.com/vi/xcLHtXRvquU/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDwgVyhyMA8=&rs=AOn4CLCfXo7tT8UsnddiwqIsGCs7kzybiw" />
 			</div>
 			<h2 class="text-2xl my-5" >Annabelle & Jordan Wedding at The Cove </h2>
 			<LiteVideoYT title="Annabelle & Jordan Wedding at The Cove" videoId="xcLHtXRvquU" backgroundImage="https://i.ytimg.com/vi/xcLHtXRvquU/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDwgVyhyMA8=&rs=AOn4CLCfXo7tT8UsnddiwqIsGCs7kzybiw" />
 				</div> -->
-				<ButtonOnTop />
-	</section>
+			<ButtonOnTop />
+		</section>
 	</main>
 </LayoutWithNavbar>
-
-
