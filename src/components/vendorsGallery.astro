@@ -1,0 +1,41 @@
+---
+interface VendorLinks {
+	title:string
+	desc:string
+	background:string
+    link:string
+}
+const vendors:VendorLinks[] = [
+	{title:'TACOMAN512',desc:'Food Catering', background:'imageVendors(5).webp',link:''},
+	{title:'NOCCO´S PIZZA',desc:'Food Catering', background:'imageVendors(2).webp',link:''},
+	{title:'LA PAELLA DE ADRI',desc:'Food Catering', background:'imageVendors(7).webp',link:''},
+	{title:'PEACHED TORTILLA',desc:'Food Catering', background:'imageVendors(3).webp',link:''},
+	{title:'YURI 360',desc:'360 Photobooth', background:'imageVendors(1).webp',link:''},
+	{title:'CINEMA ANYWHERE AUSTIN',desc:'Director LED Robot and more!', background:'imageVendors(8).webp',link:''},
+	{title:'PASTEL SOFT PLAY',desc:'San Antonio Ball pits and bounce houses', background:'imageVendors(1).1.webp',link:''},
+    {title:'AV FILMS',desc:'Video & Photography', background:'imageVendors(6).webp',link:''},
+    {title:'FULL SPECTRUM ICE',desc:'Custom Ice Sculptures', background:'imageVendors(9).webp',link:''},
+    {title:'GLAMOUR EVENTS ',desc:'', background:'imageVendors(1)2.webp',link:''},
+    {title:'MORE VENDORS ',desc:'Coming soon', background:'imageVendors(4).webp',link:''}
+]
+---
+<div class="grid grid-cols-1 gap-5 px-3 md:grid-cols-2 md:px-5 lg:grid-cols-3 ">
+	{
+		vendors.map((vendor) => (
+            
+<a class="bg-white transition-all hover:scale-105 m-5 rounded-2xl flex flex-col" href={vendor.link} target="_blank">
+    <img
+        class="rounded-t-xl w-full"
+        src={`/vendors/${vendor.background}`}
+        alt=""
+        loading="lazy"
+    />
+    <div class="bg-gray-700 py-3 text-center  rounded-b-xl relative flex-grow">
+        <p class="text-xl">{vendor.title}</p>
+        <p>{vendor.desc}</p>
+    </div>
+</a>
+
+		))
+	}
+</div>
