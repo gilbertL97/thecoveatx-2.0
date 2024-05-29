@@ -14,6 +14,9 @@ importers:
       astro:
         specifier: ^4.5.16
         version: 4.8.4(typescript@5.4.5)
+      flatpickr:
+        specifier: ^4.6.13
+        version: 4.6.13
       flowbite-datepicker:
         specifier: ^1.2.6
         version: 1.2.6
@@ -1064,6 +1067,9 @@ packages:
 
   find-yarn-workspace-root2@1.2.16:
     resolution: {integrity: sha512-hr6hb1w8ePMpPVUK39S4RlwJzi+xPLuVuG8XlwXU3KD5Yn3qgBWVfy3AzNlDhWvE1EORCE65/Qm26rFQt3VLVA==, tarball: https://registry.npmjs.org/find-yarn-workspace-root2/-/find-yarn-workspace-root2-1.2.16.tgz}
+
+  flatpickr@4.6.13:
+    resolution: {integrity: sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==, tarball: https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.13.tgz}
 
   flattie@1.1.1:
     resolution: {integrity: sha512-9UbaD6XdAL97+k/n+N7JwX46K/M6Zc6KcFYskrYL8wbBV/Uyk0CTAMY0VT+qiK5PM7AIc9aTWYtq65U7T+aCNQ==, tarball: https://registry.npmjs.org/flattie/-/flattie-1.1.1.tgz}
@@ -3137,6 +3143,8 @@ snapshots:
     dependencies:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
+
+  flatpickr@4.6.13: {}
 
   flattie@1.1.1: {}
 
