@@ -1,19 +1,39 @@
 ---
 import NavbarLink from './Links/NavbarLink.astro'
 import Logo from './icons/Logo.astro'
+import MenuIcon from './icons/MenuIcon.astro';
 const pathname = new URL(Astro.request.url).pathname
 ---
+<script >
+	  function init() {
 
-<nav class="flex w-full items-center justify-between rounded-lg border-transparent py-1">
-	<a class="pl-4" href="/"><Logo class="h-auto w-52" /></a>
+		document.addEventListener('astro:page-load', init);
+	  const button = document.querySelector('#menu-button') as Element;
+  	 const menuOpen = document.querySelector("#menu-open") as Element;
+
+	 button?.addEventListener("click", () => {
+  	  menuOpen.classList.toggle("hidden");
+});
+
+}
+
+document.addEventListener('astro:page-load', init);
+</script>
+<nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+	<a class="" href="/"><Logo class="h-auto w-32 lg:w-48  md:w-42" /></a>
+	<button id="menu-button" type="button" class=" items-center p-2 mr-9 w-10 h-10 justify-center text-sm  rounded-lg md:hidden bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400  focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+		<MenuIcon class=" items-center h-5"/>
+    </button>
+	<div class="hidden w-full md:block md:w-auto" id="menu-open">
 	<ul
-		class="font-heading mx-auto hidden space-x-12 px-4 font-semibold md:flex md:text-sm xl:text-xl"
+		class="mx-auto font-semibold flex-row  md:space-x-8 md:flex md:text-lg xl:text-xl  bg-slate-800 md:bg-transparent text-xl"
 	>
-		<li><NavbarLink active={pathname === '/'} text="Home" link="/" /></li>
-		<li><NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" /></li>
-		<li><NavbarLink active={pathname === '/videos'} text="Videos" link="videos" /></li>
-		<li><NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" /></li>
-		<li><NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" /></li>
-		<li><NavbarLink active={pathname === '/contact_us'} text="Contac Us" link="contact_us" /></li>
+		<NavbarLink active={pathname === '/'} text="Home" link="/" />
+		<NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" />
+		<NavbarLink active={pathname === '/videos'} text="Videos" link="videos" />
+		<NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" />
+		<NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" />
+		<NavbarLink active={pathname === '/contact_us'} text="Contac Us" link="contact_us" />
 	</ul>
+</div>
 </nav>
