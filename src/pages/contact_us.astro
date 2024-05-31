@@ -1,32 +1,14 @@
 ---
-import DateInput from '../components/Form/DateInput.astro'
-import NumberInputs from '../components/Form/NumberInputs.astro'
-import PhoneInputs from '../components/Form/PhoneInputs.astro'
-import TextFields from '../components/Form/TextFields.astro'
 import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro'
 ---
+<script is:inline type="text/javascript">iFrameResize({log: false, checkOrigin: false}, "#form-submit-a-form-below-aqdqgc");</script>
+<script is:inline type="text/javascript" src="https://opnform.com/widgets/iframeResize.min.js"></script>
 
 <LayoutWithNavbar>
-	<form class="max-w-md px-3 md:mx-auto">
-		<TextFields name="name" id="name" fore="name" text="Name" />
+	<div class="h-screen">
+		<iframe style="border:none;width:100%; height:100vh" id="form-submit-a-form-below-aqdqgc" src="https://opnform.com/forms/submit-a-form-below-aqdqgc"></iframe>
 
-		<TextFields type="email" name="email" id="email" fore="email" text="Email address" />
-		<!-- <div class="grid md:grid-cols-2 md:gap-6"> -->
-		<TextFields name="typeEvents" id="typeEvents" fore="typeEvents" text="Type of Event" />
-		<TextFields name="hear" id="hear" fore="hear" text="How Did You Hear About us?" />
-		<TextFields
-			name="details"
-			id="details"
-			fore="details"
-			text="Any other details we should know?"
-		/>
-		<NumberInputs />
-		<PhoneInputs />
-		<DateInput />
-		<button
-			type="submit"
-			class="w-full rounded-lg bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto"
-			>Submit</button
-		>
-	</form>
+	</div>
+	
+
 </LayoutWithNavbar>
