@@ -26,14 +26,14 @@ document.addEventListener('astro:page-load', init);
     </button>
 	<div class="hidden w-full md:block md:w-auto" id="menu-open">
 	<ul
-		class="mx-auto font-semibold flex-row  md:space-x-8 md:flex md:text-lg xl:text-xl  bg-slate-800 md:bg-transparent text-xl"
+		class="font-heading mx-auto font-semibold flex-row  md:space-x-8 md:flex md:text-lg xl:text-xl  bg-slate-800 md:bg-transparent text-xl"
 	>
-		<NavbarLink active={pathname === '/'} text="Home" link="/" />
-		<NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" />
-		<NavbarLink active={pathname === '/videos'} text="Videos" link="videos" />
-		<NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" />
-		<NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" />
-		<NavbarLink active={pathname === '/contact_us'} text="Contac Us" link="contact_us" />
+		<li><NavbarLink active={pathname === '/'} text="Home" link="/" /></li>
+		<li><NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" /></li>
+		<li><NavbarLink active={pathname === '/videos'} text="Videos" link="videos" /></li>
+		<li><NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" /></li>
+		<li><NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" /></li>
+		<li><NavbarLink active={pathname === '/contact_us'} text="Contac Us" link="contact_us" /></li>
 	</ul>
 </div>
 </nav>
