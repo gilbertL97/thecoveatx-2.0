@@ -1,39 +1,44 @@
 ---
 import NavbarLink from './Links/NavbarLink.astro'
 import Logo from './icons/Logo.astro'
-import MenuIcon from './icons/MenuIcon.astro';
+import MenuIcon from './icons/MenuIcon.astro'
 const pathname = new URL(Astro.request.url).pathname
 ---
-<script >
-	  function init() {
 
-		document.addEventListener('astro:page-load', init);
-	  const button = document.querySelector('#menu-button') as Element;
-  	 const menuOpen = document.querySelector("#menu-open") as Element;
+<script>
+	function init() {
+		document.addEventListener('astro:page-load', init)
+		const button = document.querySelector('#menu-button') as Element
+		const menuOpen = document.querySelector('#menu-open') as Element
 
-	 button?.addEventListener("click", () => {
-  	  menuOpen.classList.toggle("hidden");
-});
+		button?.addEventListener('click', () => {
+			menuOpen.classList.toggle('hidden')
+		})
+	}
 
-}
-
-document.addEventListener('astro:page-load', init);
+	document.addEventListener('astro:page-load', init)
 </script>
-<nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-	<a class="" href="/"><Logo class="h-auto w-32 lg:w-48  md:w-42" /></a>
-	<button id="menu-button" type="button" class=" items-center p-2 mr-9 w-10 h-10 justify-center text-sm  rounded-lg md:hidden bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400  focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-		<MenuIcon class=" items-center h-5"/>
-    </button>
-	<div class="hidden w-full md:block md:w-auto" id="menu-open">
-	<ul
-		class="font-heading mx-auto font-semibold flex-row  md:space-x-8 md:flex md:text-lg xl:text-xl  bg-slate-800 md:bg-transparent text-xl"
+<nav class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-2">
+	<a class="" href="/"><Logo class="md:w-42 h-auto w-32 lg:w-48" /></a>
+	<button
+		id="menu-button"
+		type="button"
+		class="mr-9 h-10 w-10 items-center justify-center rounded-lg bg-gray-100 p-2 text-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-gray-600 md:hidden"
+		aria-controls="navbar-default"
+		aria-expanded="false"
 	>
-		<li><NavbarLink active={pathname === '/'} text="Home" link="/" /></li>
-		<li><NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" /></li>
-		<li><NavbarLink active={pathname === '/videos'} text="Videos" link="videos" /></li>
-		<li><NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" /></li>
-		<li><NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" /></li>
-		<li><NavbarLink active={pathname === '/contact_us'} text="Contac Us" link="contact_us" /></li>
-	</ul>
-</div>
+		<MenuIcon class="h-5 items-center" />
+	</button>
+	<div class="hidden w-full md:block md:w-auto" id="menu-open">
+		<ul
+			class="font-heading mx-auto flex-row bg-slate-800 text-xl font-semibold md:flex md:space-x-8 md:bg-transparent md:text-lg xl:text-xl"
+		>
+			<li><NavbarLink active={pathname === '/'} text="Home" link="/" /></li>
+			<li><NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" /></li>
+			<li><NavbarLink active={pathname === '/videos'} text="Videos" link="videos" /></li>
+			<li><NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" /></li>
+			<li><NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" /></li>
+			<li><NavbarLink active={pathname === '/contact_us'} text="Contac Us" link="contact_us" /></li>
+		</ul>
+	</div>
 </nav>

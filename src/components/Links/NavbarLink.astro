@@ -5,12 +5,14 @@ interface Props {
 	active?: boolean
 }
 const { text, link, active } = Astro.props
-const mobileMenuActive =  'bg-white rounded-xl text-slate-800 md:text-white '
+const mobileMenuActive = 'bg-white rounded-xl text-slate-800 md:text-white '
 const mobileDesign = 'items-center justify-center py-3 group text-white w-full flex '
-const desktopdesgin ='md:bg-transparent md:inline md:py-0'
+const desktopdesgin = 'md:bg-transparent md:inline md:py-0'
 ---
 
-<a href={link} class=` transition duration-300 ${active && mobileMenuActive}${mobileDesign}${desktopdesgin}`
+<a
+	href={link}
+	class=` transition duration-300 ${active && mobileMenuActive}${mobileDesign}${desktopdesgin}`
 	>{text}
 	<span
 		class=`block h-0.5 max-w-0 md:bg-white md:transition-all md:duration-500 md:group-hover:max-w-full ${active ? 'md:max-w-full ' : ''}`
