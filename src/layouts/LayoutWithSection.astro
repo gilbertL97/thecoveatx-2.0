@@ -2,14 +2,20 @@
 import NavBar from '../components/NavBar.astro'
 import Layout from './Layout.astro'
 const title = 'The Cove Parise de Reves'
+interface Props {
+	background: string
+}
+const { background } = Astro.props
 ---
 
+/images/Home.webp '/images/Home2.webp'
 <Layout title={title}>
 	<main>
 		<section
-			class="h-screen max-w-full bg-[url('/images/Home.webp')] bg-cover bg-center bg-no-repeat"
+			class=`h-screen max-w-full bg-[url(${background})] bg-cover bg-center bg-no-repeat`
 		>
 			<NavBar />
+			<slot name="section1" />
 		</section>
 		<slot name="section2" />
 	</main>
