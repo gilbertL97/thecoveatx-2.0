@@ -1,6 +1,7 @@
 ---
+import LayoutWithSection from '../layouts/LayoutWithSection.astro'
+
 // Importar el componente GalleryImage
-import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro'
 
 // Lista de imágenes
 
@@ -13,6 +14,6 @@ import LayoutWithNavbar from '../layouts/LayoutWithNavbar.astro'
 // const containerClass = `grid ${getGridClass()} gap-4`;
 ---
 
-<LayoutWithNavbar>
-	<main class="h-full w-full"></main>
-</LayoutWithNavbar>
+<LayoutWithSection background="/la_casita/lacasitHome.webp" classN="bg-cover  bg-no-repeat">
+	<div slot="section2" class="h-screen w-full"></div>
+</LayoutWithSection>
