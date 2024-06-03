@@ -4,16 +4,15 @@ import Layout from './Layout.astro'
 const title = 'The Cove Parise de Reves'
 interface Props {
 	background: string
+	classN?: string
+	navBlack?: string
 }
-const { background } = Astro.props
+const { background, classN, navBlack } = Astro.props
 ---
 
-/images/Home.webp '/images/Home2.webp'
 <Layout title={title}>
 	<main>
-		<section
-			class=`h-screen max-w-full bg-[url(${background})] bg-cover bg-center bg-no-repeat`
-		>
+		<section class=`h-screen max-w-full bg-[url('${background}')]  ${classN}`>
 			<NavBar />
 			<slot name="section1" />
 		</section>

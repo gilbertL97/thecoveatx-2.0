@@ -3,6 +3,11 @@ import NavbarLink from './Links/NavbarLink.astro'
 import Logo from './icons/Logo.astro'
 import MenuIcon from './icons/MenuIcon.astro'
 const pathname = new URL(Astro.request.url).pathname
+interface Props {
+	navBlack?: boolean
+}
+const { navBlack } = Astro.props
+const textBlack = navBlack ? 'text-white' : 'text-black'
 ---
 
 <script>
@@ -23,7 +28,7 @@ const pathname = new URL(Astro.request.url).pathname
 	<button
 		id="menu-button"
 		type="button"
-		class="mr-9 h-10 w-10 items-center justify-center rounded-lg bg-gray-100 p-2 text-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-gray-600 md:hidden"
+		class="mr-9 h-10 w-10 items-center justify-center rounded-lg bg-gray-100 p-2 text-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600 md:hidden"
 		aria-controls="navbar-default"
 		aria-expanded="false"
 	>
@@ -37,8 +42,16 @@ const pathname = new URL(Astro.request.url).pathname
 			<li><NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" /></li>
 			<li><NavbarLink active={pathname === '/videos'} text="Videos" link="videos" /></li>
 			<li><NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" /></li>
-			<li><NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" /></li>
-			<li><NavbarLink active={pathname === '/contact_us'} text="Contac Us" link="contact_us" /></li>
+			<li>
+				<NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" />
+			</li>
+			<li>
+				<NavbarLink
+					active={pathname === '/contact_us'}
+					text="Contac Us"
+					link="contact_us"
+				/>
+			</li>
 		</ul>
 	</div>
 </nav>
