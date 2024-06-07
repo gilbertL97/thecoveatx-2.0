@@ -1,19 +1,23 @@
 ---
+
+import ButtonLinkWithAnimationIcon from '../components/ButtonLinks/ButtonLinkWithAnimationIcon.astro'
+import EmailIcon from '../components/icons/EmailIcon.astro'
 import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 
-// Importar el componente GalleryImage
 
-// Lista de imágenes
-
-// Función para generar la clase de grid basada en el tamaño de la pantalla
-// function getGridClass() {
-//   return window.innerWidth >= 768? 'md:grid-cols-4' : 'grid-cols-2';
-// }
-
-// // Clase de contenedor principal
-// const containerClass = `grid ${getGridClass()} gap-4`;
 ---
+<LayoutWithSection classN="bg-[url('/images/casita.webp')] bg-cover  bg-center bg-no-repeat ">
+	<div slot="section1" class="h-screen w-full">
+	<div class="text-center max-w-screen-sm mx-auto mt-16">
+		<h2 class="text-white text-5xl font-bold ">La Casita Getaway</h2>
+		<p class="text-xl text-pretty  mt-12 font-semibold">Escape to the serene beauty of La Casita nestled on a sprawling 7 1/2 acre property.Unwind with stunning canyon views and take in the tranquility of nature. Indulge in a truly relaxing getaway at this charming home.
+			</p>
+			<ButtonLinkWithAnimationIcon text="Click Here To book La Casita" link="contact_us">
+				<EmailIcon slot="icon" />
+			</ButtonLinkWithAnimationIcon>
+	</div>
+	<div slot="section2" class="h-screen w-full">
 
-<LayoutWithSection background="/la_casita/lacasitHome.webp" classN="bg-cover  bg-no-repeat">
-	<div slot="section2" class="h-screen w-full"></div>
+
+	</div>
 </LayoutWithSection>
