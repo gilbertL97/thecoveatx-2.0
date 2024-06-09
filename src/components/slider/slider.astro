@@ -9,14 +9,13 @@ const {className} = Astro.props
 <div class=`relative h-3/4 ${className} `>
     <div class="swiper">
         <div class="swiper-wrapper">
-            <SliderElement photoSr="/images/Home2.webp"/>
-            <SliderElement photoSr="/images/Home.webp"/>
-            <SliderElement photoSr="/images/casita.webp"/>
+          {Array.from({ length: 15 }).map((_, i) => (
+              <SliderElement photoSr={`/la_casita_gallery/image (${i+1}).webp`}/>
+          ))}
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
     </div>
 </div>
   <script>
@@ -41,7 +40,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
         },
         autoplay: {
         delay: 2500,
-        pauseOnMouseEnter: true,
       },
         modules: [Navigation, Pagination, Autoplay, EffectFade],
         navigation: {
