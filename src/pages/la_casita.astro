@@ -2,22 +2,29 @@
 
 import ButtonLinkWithAnimationIcon from '../components/ButtonLinks/ButtonLinkWithAnimationIcon.astro'
 import EmailIcon from '../components/icons/EmailIcon.astro'
+import Slider from '../components/slider/slider.astro'
 import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 
 
 ---
-<LayoutWithSection classN="bg-[url('/images/casita.webp')] bg-cover  bg-center bg-no-repeat ">
+<LayoutWithSection classN="bg-[url('/images/casita.webp')] md:bg-cover  bg-center bg-no-repeat ">
 	<div slot="section1" class="h-screen w-full">
-	<div class="text-center max-w-screen-sm mx-auto mt-16">
-		<h2 class="text-white text-5xl font-bold ">La Casita Getaway</h2>
-		<p class="text-xl text-pretty  mt-12 font-semibold">Escape to the serene beauty of La Casita nestled on a sprawling 7 1/2 acre property.Unwind with stunning canyon views and take in the tranquility of nature. Indulge in a truly relaxing getaway at this charming home.
+	<div class="text-center max-w-screen-sm mx-auto mt-16 ">
+		<h2 class="text-white text-3xl md:text-5xl font-bold ">La Casita Getaway</h2>
+		<p class="text-lg md:text-xl text-pretty  my-12 font-semibold ">Escape to the serene beauty of La Casita nestled on a sprawling 7 1/2 acre property.Unwind with stunning canyon views and take in the tranquility of nature. Indulge in a truly relaxing getaway at this charming home.
 			</p>
 			<ButtonLinkWithAnimationIcon text="Click Here To book La Casita" link="contact_us">
 				<EmailIcon slot="icon" />
 			</ButtonLinkWithAnimationIcon>
 	</div>
+</div>
 	<div slot="section2" class="h-screen w-full">
-
+		<Slider className="mt-24"/>
+<div class='flex items-center justify-center mt-12'>
+	<ButtonLinkWithAnimationIcon text="Click Here To book La Casita" link="contact_us" >
+		<EmailIcon slot="icon" />
+	</ButtonLinkWithAnimationIcon>
+</div>
 
 	</div>
 </LayoutWithSection>

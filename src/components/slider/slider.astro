@@ -1,0 +1,75 @@
+---
+import SliderElement from "./sliderElement.astro";
+interface Props{
+  className:string
+}
+const {className} = Astro.props
+---
+
+<div class=`relative h-3/4 ${className} `>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <SliderElement photoSr="/images/Home2.webp"/>
+            <SliderElement photoSr="/images/Home.webp"/>
+            <SliderElement photoSr="/images/casita.webp"/>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+</div>
+  <script>
+    import Swiper from 'swiper';
+import { Navigation, Pagination,Autoplay,EffectFade } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/swiper-bundle.css';
+
+
+
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        spaceBetween: 30,
+        effect:'fade',
+        speed: 1000,
+        fadeEffect:{
+            crossFade:true
+        },
+        autoplay: {
+        delay: 2500,
+        pauseOnMouseEnter: true,
+      },
+        modules: [Navigation, Pagination, Autoplay, EffectFade],
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+});
+</script>
+
+<style>
+
+	.swiper {
+		width: 95%;
+		height: 100%;
+	}
+	
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
