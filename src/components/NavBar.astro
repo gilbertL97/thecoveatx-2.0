@@ -2,12 +2,9 @@
 import NavbarLink from './Links/NavbarLink.astro'
 import Logo from './icons/Logo.astro'
 import MenuIcon from './icons/MenuIcon.astro'
+
 const pathname = new URL(Astro.request.url).pathname
-interface Props {
-	navBlack?: boolean
-}
-const { navBlack } = Astro.props
-const textBlack = navBlack ? 'text-white' : 'text-black'
+console.log(Astro.request.url   ,new URL(Astro.request.url).pathname)
 ---
 
 <script>
@@ -52,6 +49,26 @@ const textBlack = navBlack ? 'text-white' : 'text-black'
 					link="contact_us"
 				/>
 			</li>
+			<li> 
+				<astro-greet data-message={pathname}>
+					<button>Say hi!</button>
+				  </astro-greet>
+			</li>
 		</ul>
 	</div>
 </nav>
+<script>
+	class AstroGreet extends HTMLElement {
+	  constructor() {
+		super();
+  
+		// Read the message from the data attribute.
+		const message = this.dataset.message;
+		const button = this.querySelector('button');
+		button.addEventListener('click', () => {
+		  alert(message);
+		});
+	  }
+	}
+  
+	customElements.define('astro-greet', AstroGreet);
