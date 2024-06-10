@@ -44,7 +44,7 @@ const pathname = new URL(Astro.request.url).pathname
 			</li>
 			<li>
 				<NavbarLink
-					active={pathname === '/contact_us'}
+					active={pathname === '/contact_us'|| pathname === '/contact_us/'}
 					text="Contac Us"
 					link="contact_us"
 				/>
