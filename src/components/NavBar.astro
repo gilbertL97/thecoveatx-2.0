@@ -4,7 +4,7 @@ import Logo from './icons/Logo.astro'
 import MenuIcon from './icons/MenuIcon.astro'
 
 const pathname = new URL(Astro.request.url).pathname
-console.log(Astro.request.url   ,new URL(Astro.request.url).pathname)
+
 ---
 
 <script>
@@ -36,11 +36,11 @@ console.log(Astro.request.url   ,new URL(Astro.request.url).pathname)
 			class="font-heading mx-auto flex-row bg-slate-800 text-xl font-semibold md:flex md:space-x-8 md:bg-transparent md:text-lg xl:text-xl"
 		>
 			<li><NavbarLink active={pathname === '/'} text="Home" link="/" /></li>
-			<li><NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" /></li>
-			<li><NavbarLink active={pathname === '/videos'} text="Videos" link="videos" /></li>
-			<li><NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" /></li>
+			<li><NavbarLink active={pathname === '/galleryP' || pathname === '/galleryP/'} text="Gallery" link="galleryP" /></li>
+			<li><NavbarLink active={pathname === '/videos'|| pathname === '/videos/'} text="Videos" link="videos" /></li>
+			<li><NavbarLink active={pathname === '/vendors'|| pathname === '/vendors/'} text="Vendors" link="vendors" /></li>
 			<li>
-				<NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" />
+				<NavbarLink active={pathname === '/la_casita'|| pathname === '/la_casita/'} text="La Casita" link="la_casita" />
 			</li>
 			<li>
 				<NavbarLink
@@ -49,26 +49,6 @@ console.log(Astro.request.url   ,new URL(Astro.request.url).pathname)
 					link="contact_us"
 				/>
 			</li>
-			<li> 
-				<astro-greet data-message={pathname}>
-					<button>Say hi!</button>
-				  </astro-greet>
-			</li>
 		</ul>
 	</div>
 </nav>
-<script>
-	class AstroGreet extends HTMLElement {
-	  constructor() {
-		super();
-  
-		// Read the message from the data attribute.
-		const message = this.dataset.message;
-		const button = this.querySelector('button');
-		button.addEventListener('click', () => {
-		  alert(message);
-		});
-	  }
-	}
-  
-	customElements.define('astro-greet', AstroGreet);
