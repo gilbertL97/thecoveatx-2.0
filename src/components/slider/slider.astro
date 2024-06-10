@@ -26,10 +26,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/swiper-bundle.css';
 
-
-
-
-document.addEventListener( 'DOMContentLoaded', function() {
+document.addEventListener( 'astro:page-load', function() {
     const swiper = new Swiper('.swiper', {
         loop: true,
         spaceBetween: 30,
@@ -40,6 +37,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
         },
         autoplay: {
         delay: 2500,
+        disableOnInteraction:false,
       },
         modules: [Navigation, Pagination, Autoplay, EffectFade],
         navigation: {
@@ -54,7 +52,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 	.swiper {
 		width: 95%;
-		height: 100%;
+		height: 90%;
 	}
 	
 

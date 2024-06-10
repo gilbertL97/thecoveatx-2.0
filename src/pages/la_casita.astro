@@ -4,6 +4,7 @@ import ButtonLinkWithAnimationIcon from '../components/ButtonLinks/ButtonLinkWit
 import EmailIcon from '../components/icons/EmailIcon.astro'
 import Slider from '../components/slider/slider.astro'
 import LayoutWithSection from '../layouts/LayoutWithSection.astro'
+import CheckCircular from '../components/icons/CheckCircular.astro'
 
 
 ---
@@ -18,9 +19,24 @@ import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 			</ButtonLinkWithAnimationIcon>
 	</div>
 </div>
-	<div slot="section2" class="h-screen w-full">
-		<Slider className="mt-24"/>
-<div class='flex items-center justify-center mt-12'>
+	<div slot="section2" class=" w-full">
+		<Slider className="pt-8"/>
+<div class=' pt-12 text-center'>
+	<div class="h-28 flex  justify-center items-center md:gap-32">
+		<div  class="flex flex-col items-center space-y-2 w-40">
+			<CheckCircular className='h-20 animate-pulse'/>
+			<h3 class="text-xl" >Bathroom</h3>
+		</div>
+		<div class="flex flex-col items-center space-y-2 w-40">
+			<CheckCircular className='h-20 animate-pulse'/>
+			<h3 class="text-xl">Pool</h3>
+		</div>
+		<div class="flex flex-col items-center space-y-2 w-40">
+			<CheckCircular className='h-20 animate-pulse'/>
+			<h3 class="text-xl">Amazing View</h3>
+		</div>
+	</div>
+	<h2 class="text-2xl md:text-5xl py-10">BOOK LA CASITA TODAY</h2>
 	<ButtonLinkWithAnimationIcon text="Click Here To book La Casita" link="contact_us" >
 		<EmailIcon slot="icon" />
 	</ButtonLinkWithAnimationIcon>
