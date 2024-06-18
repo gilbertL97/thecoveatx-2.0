@@ -2,12 +2,9 @@
 import NavbarLink from './Links/NavbarLink.astro'
 import Logo from './icons/Logo.astro'
 import MenuIcon from './icons/MenuIcon.astro'
+
 const pathname = new URL(Astro.request.url).pathname
-interface Props {
-	navBlack?: boolean
-}
-const { navBlack } = Astro.props
-const textBlack = navBlack ? 'text-white' : 'text-black'
+
 ---
 
 <script>
@@ -39,15 +36,15 @@ const textBlack = navBlack ? 'text-white' : 'text-black'
 			class="font-heading mx-auto flex-row bg-slate-800 text-xl font-semibold md:flex md:space-x-8 md:bg-transparent md:text-lg xl:text-xl"
 		>
 			<li><NavbarLink active={pathname === '/'} text="Home" link="/" /></li>
-			<li><NavbarLink active={pathname === '/galleryP'} text="Gallery" link="galleryP" /></li>
-			<li><NavbarLink active={pathname === '/videos'} text="Videos" link="videos" /></li>
-			<li><NavbarLink active={pathname === '/vendors'} text="Vendors" link="vendors" /></li>
+			<li><NavbarLink active={pathname === '/galleryP' || pathname === '/galleryP/'} text="Gallery" link="galleryP" /></li>
+			<li><NavbarLink active={pathname === '/videos'|| pathname === '/videos/'} text="Videos" link="videos" /></li>
+			<li><NavbarLink active={pathname === '/vendors'|| pathname === '/vendors/'} text="Vendors" link="vendors" /></li>
 			<li>
-				<NavbarLink active={pathname === '/la_casita'} text="La Casita" link="la_casita" />
+				<NavbarLink active={pathname === '/la_casita'|| pathname === '/la_casita/'} text="La Casita" link="la_casita" />
 			</li>
 			<li>
 				<NavbarLink
-					active={pathname === '/contact_us'}
+					active={pathname === '/contact_us'|| pathname === '/contact_us/'}
 					text="Contac Us"
 					link="contact_us"
 				/>
