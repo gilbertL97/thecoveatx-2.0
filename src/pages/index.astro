@@ -8,18 +8,10 @@ import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 <LayoutWithSection classN="bg-cover bg-center bg-no-repeat  bg-[url('/images/Home.webp')]">
 	<section
 		slot="section2"
-		class="-z-10 h-screen max-w-full overflow-hidden bg-[url('/images/Home2.webp')] bg-cover bg-no-repeat [clip-path:ellipse(89%_50%_at_76%_25%)] md:[clip-path:polygon(49%_0,_75%_0,_85%_6%,_100%_0,_100%_100%,_0_99%,_0_25%,_0_0,_11%_5%,_17%_0)] lg:h-[calc(100vh+10vh)]"
+		class=" h-screen max-w-full overflow-hidden bg-[url('/images/Home2.webp')] bg-cover bg-no-repeat md:[clip-path:polygon(49%_0,_75%_0,_85%_6%,_100%_0,_100%_100%,_0_99%,_0_25%,_0_0,_11%_5%,_17%_0)] lg:h-[calc(100vh+10vh)]"
 	>
-		<div class="hidden pt-20 text-xl text-white lg:flex lg:items-center">
-			<p class="max-w-4xl flex-grow text-pretty px-10">
-				This newly-remodeled luxurious 5-bedroom, 3-1/2 bath home is nestled in a beautiful
-				7-1/2 acre wooded area in the hills of Northwest Austin. It affords guests an
-				amazing canyon view and ample privacy in a serene setting. This home is minutes from
-				the heart of downtown Austin and is close to popular destinations including The
-				Austin Country Club, Lake Travis, the Bull Creek Greenbelt, the hike and bike trails
-				of Ladybird Lake, Zilker Park and Austin’s iconic Pennybacker Bridge
-			</p>
-			<div class="mb-10 ml-auto mr-10 hidden gap-5 lg:flex">
+		<div class="pt-20 mx-3 text-base md:text-xl text-white flex md:flex-row flex-col items-center ">
+			<div class="mb-10  gap-5 flex items-center justify-center md:ml-10">
 				<ButtonLinkWithAnimationIcon text="Inquire Now" link="contact_us">
 					<EmailIcon slot="icon" />
 				</ButtonLinkWithAnimationIcon>
@@ -27,6 +19,17 @@ import LayoutWithSection from '../layouts/LayoutWithSection.astro'
 					<GalleryIcon slot="icon" />
 				</ButtonLinkWithAnimationIcon>
 			</div>
+			<div class="md:max-w-4xl md:flex-grow md:px-10 md:order-first  w-full my-32 md:my-0">
+				<p class="text-pretty bg-slate-900 mx-3 bg-opacity-70 md:bg-opacity-0 rounded-xl px-2">
+					This newly-remodeled luxurious 5-bedroom, 3-1/2 bath home is nestled in a beautiful
+					7-1/2 acre wooded area in the hills of Northwest Austin. It affords guests an
+					amazing canyon view and ample privacy in a serene setting. This home is minutes from
+					the heart of downtown Austin and is close to popular destinations including The
+					Austin Country Club, Lake Travis, the Bull Creek Greenbelt, the hike and bike trails
+					of Ladybird Lake, Zilker Park and Austin’s iconic Pennybacker Bridge
+				</p>
+			</div>
+
 		</div>
 	</section>
 </LayoutWithSection>
